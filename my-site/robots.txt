@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://afanasgen1405-design.github.io/proect-ti12/sitemap.xml
