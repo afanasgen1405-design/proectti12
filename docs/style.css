@@ -1,0 +1,174 @@
+/* ==========================================
+   1. СБРОС И БАЗОВЫЕ СТИЛИ (Mobile-First)
+   ========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ==========================================
+   2. ШАПКА И НАВИГАЦИЯ (HEADER & NAV)
+   ========================================== */
+header {
+  background-color: #003366;
+  color: #ffffff;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #002244;
+  padding: 12px 16px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  /* Требование UX: Минимальная тач-зона для пальца >= 44px */
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+nav a:hover, nav a:focus {
+  background-color: #0055a5;
+}
+
+/* ==========================================
+   3. ОСНОВНОЙ КОНТЕНТ (MAIN & ARTICLE)
+   ========================================== */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+article {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+article h2 {
+  color: #003366;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 5px;
+}
+
+article p {
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+}
+
+/* Адаптивность изображений (для cat.jpg и др.) */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+/* ==========================================
+   4. ПОДВАЛ (FOOTER)
+   ========================================== */
+footer {
+  background-color: #222222;
+  color: #cccccc;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+/* ==========================================
+   5. МЕДИА-ЗАПРОСЫ (MEDIA QUERIES)
+   ========================================== */
+
+/* --- Планшетный брейкпоинт (768px - 1023px) --- */
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 30px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+    text-align: left;
+  }
+
+  nav {
+    flex-direction: row;
+    width: auto;
+    gap: 12px;
+  }
+
+  nav a {
+    background-color: transparent;
+    padding: 8px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  nav a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  main {
+    padding: 30px 20px;
+  }
+
+  article {
+    padding: 30px;
+  }
+}
+
+/* --- Десктопный брейкпоинт (≥1024px) --- */
+@media (min-width: 1024px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  nav a {
+    font-size: 1.1rem;
+    padding: 10px 18px;
+  }
+
+  article h2 {
+    font-size: 1.5rem;
+  }
+}
